@@ -1,0 +1,74 @@
+[
+  {
+    "id": "1",
+    "sectionTitle": "Company",
+    "sectionLinks": [
+      {
+        "isExternal": true,
+        "id": "1",
+        "link": "https://google.com",
+        "title": "link1"
+      },
+      {
+        "isExternal": true,
+        "id": "2",
+        "link": "https://google.com",
+        "title": "link2"
+      },
+      {
+        "isExternal": true,
+        "id": "3",
+        "link": "https://google.com",
+        "title": "link3"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "sectionTitle": "Knowledge",
+    "sectionLinks": [
+      {
+        "isExternal": true,
+        "id": "1",
+        "link": "https://google.com",
+        "title": "link1"
+      },
+      {
+        "isExternal": true,
+        "id": "2",
+        "link": "https://google.com",
+        "title": "link2"
+      },
+      {
+        "isExternal": true,
+        "id": "3",
+        "link": "https://google.com",
+        "title": "link3"
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "sectionTitle": "About",
+    "sectionLinks": [
+      {
+        "isExternal": true,
+        "id": "1",
+        "link": "https://google.com",
+        "title": "link1"
+      },
+      {
+        "isExternal": true,
+        "id": "2",
+        "link": "https://google.com",
+        "title": "link2"
+      },
+      {
+        "isExternal": true,
+        "id": "3",
+        "link": "https://google.com",
+        "title": "link3"
+      }
+    ]
+  }
+]

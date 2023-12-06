@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "className": "bg-green-950",
+    "title": "Defining Class since 1886",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including v",
+    "buttonText": "Click Here !",
+    "bgcolor": "green"
+  },
+  {
+    "id": "2",
+    "className": "bg-yellow-700",
+    "title": "Defining Class since 1886",
+    "description": "Highlighting a legacy of class-defining Mercedes-Benz cars that paved the way for the new Concept CLA Class.",
+    "buttonText": "Click Here !",
+    "bgcolor": "yellow"
+  },
+  {
+    "id": "3",
+    "className": "bg-blue-950",
+    "title": "Defining Class since 1886",
+    "description": "Highlighting a legacy of class-defining Mercedes-Benz cars that paved the way for the new Concept CLA Class.",
+    "buttonText": "Click Here !",
+    "bgcolor": "blue"
+  }
+]
