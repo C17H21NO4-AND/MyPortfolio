@@ -1,36 +1,38 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 import HelloSection from "./components/HelloSection";
-import { getHelloSectionsContent } from "./services/api";
+import { useHelloSectionsContent } from "./services/api";
 import SocialContent from "./components/SocialContent/SocialContent";
 import MyProjects from "./components/MyProjects/MyProjects";
 import Footer from './components/Footer'
-
+import TopBar from "./components/topBar/topBar";
 
 function App() {
-  const [helloSections, setHelloSections] = useState([]);
-  const helloSections1 = helloSections.slice(0, 2);
-  const helloSections2 = helloSections.slice(2);
-  const [isLoading, setIsLoading] = useState(true);
   
+  
+  const {data, loading} = useHelloSectionsContent();
+  
+  const helloSections1 = data.slice(0, 2);
+  const helloSections2 = data.slice(2);
+  // console.log(data, loading, error)
 
+  // useEffect(() => {
+  //   async function fetch() {
+  //     try {
+  //       const data = await useHelloSectionsContent();
+  //       setHelloSections(data);
+  //       setIsLoading(false);
+  //     } catch (err) {
+  //       console.error(err);
+  //       setIsLoading(false);
+  //     } 
+  //   }
 
-  useEffect(() => {
-    async function fetch() {
-      try {
-        const data = await getHelloSectionsContent();
-        setHelloSections(data);
-        setIsLoading(false);
-      } catch (err) {
-        console.error(err);
-        setIsLoading(false);
-      }
-    }
+  //   fetch();
+    
+  // }, []);
 
-    fetch();
-  }, []);
-
-  if (isLoading) {
+  if (loading) {
     return (
       <div className="flex h-screen items-center justify-center">
         <div>Is loading...</div>
@@ -38,25 +40,26 @@ function App() {
     );
   }
 
+  console.log(helloSections1)
   return (
     <div className="App text-fuchsia-100">
-      <div className="topBar bg-black h-20 md:h-14 sm:h-10 flex items-center justify-center fixed w-full">
-        <img className="border-2 border-blue-500 w-10 h-10 bg-blue-100 my-auto" />
-      </div>
+      
+    <TopBar/>
 
       {helloSections1.map(
-        ({ id, buttonText, description, text, className }) => (
+        ({ id, buttontext, description, text, classname }) => (
           <HelloSection
             key={id}
-            className={className}
+            className={classname}
             title={text}
             description={description}
-            buttonText={buttonText}
+            buttonText={buttontext}
           />
         )
       )}
 
         <MyProjects/>
+
       {helloSections2.map(
         ({ id, buttonText, description, text, className }) => (
           <HelloSection
@@ -70,8 +73,7 @@ function App() {
       )}
         <SocialContent/>
 
-        
-     <Footer />
+        <Footer />
 
         
 

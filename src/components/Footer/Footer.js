@@ -26,7 +26,7 @@ function Footer() {
     return <div className="bg-black color-white ">Loading...</div>;
   }
   return (
-    <div className="bg-black color-white flex gap-5 p-14">
+    <div className="bg-black color-white md:flex gap-5 pl-14 py-40">
       {footerData.map(({ id, sectionTitle, sectionLinks }) => (
         <InformationFooter
           key={id}
