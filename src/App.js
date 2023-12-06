@@ -1,17 +1,14 @@
-import { useState, useEffect } from "react";
 import "./App.css";
 import HelloSection from "./components/HelloSection";
 import { useHelloSectionsContent } from "./services/api";
 import SocialContent from "./components/SocialContent/SocialContent";
 import MyProjects from "./components/MyProjects/MyProjects";
-import Footer from './components/Footer'
+import Footer from "./components/Footer";
 import TopBar from "./components/topBar/topBar";
 
 function App() {
-  
-  
-  const {data, loading} = useHelloSectionsContent();
-  
+  const { data, loading } = useHelloSectionsContent();
+
   const helloSections1 = data.slice(0, 2);
   const helloSections2 = data.slice(2);
   // console.log(data, loading, error)
@@ -25,11 +22,11 @@ function App() {
   //     } catch (err) {
   //       console.error(err);
   //       setIsLoading(false);
-  //     } 
+  //     }
   //   }
 
   //   fetch();
-    
+
   // }, []);
 
   if (loading) {
@@ -40,11 +37,10 @@ function App() {
     );
   }
 
-  console.log(helloSections1)
+  console.log(helloSections1);
   return (
     <div className="App text-fuchsia-100">
-      
-    <TopBar/>
+      <TopBar />
 
       {helloSections1.map(
         ({ id, buttontext, description, text, classname }) => (
@@ -58,7 +54,7 @@ function App() {
         )
       )}
 
-        <MyProjects/>
+      <MyProjects />
 
       {helloSections2.map(
         ({ id, buttonText, description, text, className }) => (
@@ -71,11 +67,9 @@ function App() {
           />
         )
       )}
-        <SocialContent/>
+      <SocialContent />
 
-        <Footer />
-
-        
+      <Footer />
 
       {/* <HelloSection data={"asdasdad "} />
         <HelloSection data={"iuqwrhw "} /> */}
